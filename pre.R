@@ -58,6 +58,7 @@ ggcorrplot(corr2, method = 'square', type = 'lower', show.legend = F, show.diag 
            lab = F, lab_col = 'black', lab_size = 3.5, p.mat = p_value2, sig.level = 0.05, pch.col = 'black',
            tl.cex = 10, tl.col = 'white', tl.srt = 0, ggtheme = ggplot2::theme_test())
 
+write.csv(temp[, 1:73], "feature.csv", row.names = F)
+write.csv(temp[, 74], "target.csv", row.names = F)
 
-glm_vs <- glm(status~length_url+length_hostname, data=temp, family=binomial)
-summary(glm_vs)
+temp
